@@ -36,8 +36,9 @@ class MainApp extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Card(
                     child: ListTile(
-                      title:
-                          Text('${lista[index].nome} (${lista[index].sigla})'),
+                      title: Text(
+                        '${lista[index].nome} (${lista[index].sigla})',
+                      ),
                       subtitle: Text('Região ${lista[index].regiao}'),
                       onTap: () {
                         Navigator.push(
@@ -54,7 +55,8 @@ class MainApp extends StatelessWidget {
                 },
               );
             }
-            return CircularProgressIndicator();
+            //return Center(child: LinearProgressIndicator());
+            return Center(child: CircularProgressIndicator());
           },
         ),
       ),
@@ -94,7 +96,7 @@ class _MunicipioViewState extends State<MunicipioView> {
               },
             );
           }
-          return CircularProgressIndicator();
+          return Center(child: CircularProgressIndicator());
         },
       ),
     );

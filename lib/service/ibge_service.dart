@@ -17,6 +17,7 @@ class IbgeService {
     );
 
     if (resposta.statusCode == 200) {
+      await Future.delayed(const Duration(seconds: 3));
       //Resposta recebida com sucesso
       Iterable lista = json.decode(resposta.body);
       return lista.map((modelo) => Estado.fromJson(modelo)).toList();
